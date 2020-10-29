@@ -86,11 +86,11 @@ const Home: React.FC = () => {
         <h3>Elevation</h3>
         <div className="form-group">
           <label label-for="offsetX">offset-x</label>
-          <input type="range" className="form-control-range" min='-999' max="100" id="offsetX" value={offsetX} onChange={e => setOffsetX(parseInt(e.target.value))} />
+          <input type="range" className="form-control-range" min='-999' max="999" id="offsetX" value={offsetX} onChange={e => setOffsetX(parseInt(e.target.value))} />
         </div>
         <div className="form-group">
           <label label-for="offsetY"> offset-y </label>
-          <input type="range" className="form-control-range" min='-999' max="100" id="offsetY" value={offsetY} onChange={e => setOffsetY(parseInt(e.target.value))} />
+          <input type="range" className="form-control-range" min='-999' max="999" id="offsetY" value={offsetY} onChange={e => setOffsetY(parseInt(e.target.value))} />
         </div>
         <div className="form-group">
           <label label-for="shadowColor">color </label>
@@ -98,11 +98,11 @@ const Home: React.FC = () => {
         </div>
         <div className="form-group">
           <label label-for="blurRadius">blur-radius</label>
-          <input type="range" className="form-control-range" min='0' max="100" id="blurRadius" value={blurRadius} onChange={e => setBlurRadius(parseInt(e.target.value))} />
+          <input type="range" className="form-control-range" min='0' max="999" id="blurRadius" value={blurRadius} onChange={e => setBlurRadius(parseInt(e.target.value))} />
         </div>
         <div className="form-group">
           <label label-for="spreadRadius">spread-radius</label>
-          <input type="range" className="form-control-range" min='0' max="100" id="spreadRadius" value={spreadRadius} onChange={e => setSpreadRadius(parseInt(e.target.value))} />
+          <input type="range" className="form-control-range" min="0" max="999" id="spreadRadius" value={spreadRadius} onChange={e => setSpreadRadius(parseInt(e.target.value))} />
         </div>
       </div>
     </div>
