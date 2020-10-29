@@ -10,6 +10,7 @@ interface boxRadiusProps {
   offsetY: number;
   blurRadius: number;
   spreadRadius: number;
+  boxSize: number;
 }
 
 export const BoxRadius = styled.div.attrs((props: boxRadiusProps) => ({
@@ -22,11 +23,13 @@ export const BoxRadius = styled.div.attrs((props: boxRadiusProps) => ({
   offsetY: props.offsetY,
   blurRadius: props.blurRadius,
   spreadRadius: props.spreadRadius,
+  boxSize: props.boxSize,
 }))`
   border-radius: ${({ borderTop, borderRight, borderBottom, borderLeft }) =>
     `${borderTop}px ${borderRight}px ${borderBottom}px ${borderLeft}px`};
   box-shadow: ${({ offsetX, offsetY, blurRadius, spreadRadius, shadowColor }) =>
     `${offsetX}px ${offsetY}px ${blurRadius}px ${spreadRadius}px ${shadowColor}`};
-    height: 300px;
-    width: 300px;
+  height: ${({ boxSize }) => `${boxSize}px`};
+  width: ${({ boxSize }) => `${boxSize}px`};
+
 `;
