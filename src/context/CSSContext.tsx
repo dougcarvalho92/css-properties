@@ -52,7 +52,6 @@ export const CSSProvider: React.FC = ({ children }) => {
         if (borderTopRight > boxMaxSize) setBorderTopRight(boxMaxSize);
     }, [boxSizeWidth, boxSizeHeight]);
 
-
     //TAMANHO
     const handleChangeBoxWidth = (value: number) => {
         setBoxSizeWidth(value);
@@ -74,14 +73,12 @@ export const CSSProvider: React.FC = ({ children }) => {
         setBorderBottomRight(value);
     }
     //LOCATION
-
     const handleChangeOffsetY = (value: number) => {
         setOffsetY(value);
     }
     const handleChangeOffsetX = (value: number) => {
         setOffsetX(value);
     }
-
     //COLOR, EFFECT AND SIZE
     const handleChangeShadowColor = (value: string) => {
         setShadowColor(value);
@@ -92,8 +89,6 @@ export const CSSProvider: React.FC = ({ children }) => {
     const handleChangeBlurRadius = (value: number) => {
         setBlurRadius(value);
     }
-
-
 
     return (
         <CSSContext.Provider

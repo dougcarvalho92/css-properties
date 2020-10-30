@@ -14,25 +14,14 @@ interface boxRadiusProps {
   boxSizeHeight: number;
 }
 
-export const BoxRadius = styled.div.attrs((props: boxRadiusProps) => ({
-  borderTopLeft: props.borderTopLeft,
-  borderBottomRight: props.borderBottomRight,
-  borderBottomLeft: props.borderBottomLeft,
-  borderTopRight: props.borderTopRight,
-  shadowColor: props.shadowColor,
-  offsetX: props.offsetX,
-  offsetY: props.offsetY,
-  blurRadius: props.blurRadius,
-  spreadRadius: props.spreadRadius,
-  boxSizeWidth: props.boxSizeWidth,
-  boxSizeHeight: props.boxSizeHeight,
-}))`
-  border-radius: ${({ borderTopLeft, borderTopRight, borderBottomRight, borderBottomLeft }) =>
-    `${borderTopLeft}px ${borderTopRight}px ${borderBottomRight}px ${borderBottomLeft}px`};
-  box-shadow: ${({ offsetX, offsetY, blurRadius, spreadRadius, shadowColor }) =>
-    `${offsetX}px ${offsetY}px ${blurRadius}px ${spreadRadius}px ${shadowColor}`};
-  height: ${({ boxSizeHeight }) => `${boxSizeHeight}px`};
-  width: ${({ boxSizeWidth }) => `${boxSizeWidth}px`};
+export const BoxRadius = styled.div.attrs((props: boxRadiusProps) => props)`
+  border-radius: ${(props) =>
+    `${props.borderTopLeft}px ${props.borderTopRight}px ${props.borderBottomRight}px ${props.borderBottomLeft}px`};
+
+  box-shadow: ${(props) => `${props.offsetX}px ${props.offsetY}px ${props.blurRadius}px ${props.spreadRadius}px ${props.shadowColor}`};
+
+  height: ${(props) => `${props.boxSizeHeight}px`};
+  width: ${(props) => `${props.boxSizeWidth}px`};
   background-color: #f6f6f6;
   max-width: 100%;
   max-height: 100%;
