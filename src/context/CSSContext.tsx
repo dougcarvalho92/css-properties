@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, { createContext, useState, useContext } from "react";
 
 interface boxRadiusProps {
     borderTopLeft: number;
@@ -12,7 +12,7 @@ interface boxRadiusProps {
     spreadRadius: number;
     boxSizeWidth: number;
     boxSizeHeight: number;
-    boxSize: number;
+
     handleChangeTopLeftRadius(value: number): void;
     handleChangeTopRightRadius(value: number): void;
     handleChangeBottomLeftRadius(value: number): void;
@@ -41,7 +41,7 @@ export const CSSProvider: React.FC = ({ children }) => {
     const [shadowColor, setShadowColor] = useState("#333");
     const [boxSizeHeight, setBoxSizeHeight] = useState(300);
     const [boxSizeWidth, setBoxSizeWidth] = useState(500);
-    const [boxSize, setBoxSize] = useState(0);
+
 
 
 
@@ -97,7 +97,7 @@ export const CSSProvider: React.FC = ({ children }) => {
                 spreadRadius,
                 boxSizeWidth,
                 boxSizeHeight,
-                boxSize,
+
                 handleChangeTopLeftRadius,
                 handleChangeTopRightRadius,
                 handleChangeBottomLeftRadius,

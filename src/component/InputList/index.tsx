@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Input from '../../component/Input';
 import { useCSSProperties } from '../../context/CSSContext';
 
@@ -16,7 +15,6 @@ const InputList: React.FC = () => {
         spreadRadius,
         boxSizeHeight,
         boxSizeWidth,
-        boxSize,
         handleChangeTopLeftRadius,
         handleChangeTopRightRadius,
         handleChangeBottomLeftRadius,
