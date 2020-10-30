@@ -30,19 +30,19 @@ const InputList: React.FC = () => {
         handleChangeBlurRadius } = useCSSProperties();
     return <><h3>Box</h3>
 
-        <Input name="Box Width" type="range" className="form-control-range" min='0' max="999" id="border-radius-top" value={boxSizeWidth} onChange={(e) => handleChangeBoxWidth(parseInt(e.target.value))} />
+        <Input name="Box Width" type="range" className="form-control-range" min='0' max="500" id="border-radius-top" value={boxSizeWidth} onChange={(e) => handleChangeBoxWidth(parseInt(e.target.value))} />
 
-        <Input name="Box Height" type="range" className="form-control-range" min='0' max="999" id="border-radius-top" value={boxSizeHeight} onChange={(e) => handleChangeBoxHeight(parseInt(e.target.value))} />
+        <Input name="Box Height" type="range" className="form-control-range" min='0' max="500" id="border-radius-top" value={boxSizeHeight} onChange={(e) => handleChangeBoxHeight(parseInt(e.target.value))} />
         <hr />
 
         <h3>Border Radius</h3>
-        <Input name="Top - Left" type="range" className="form-control-range" min='0' max={boxSize} id="border-radius-top" value={borderTopLeft} onChange={e => { handleChangeTopLeftRadius(parseInt(e.target.value)); }} />
+        <Input name="Top - Left" type="range" className="form-control-range" min='0' max="500" id="border-radius-top" value={borderTopLeft} onChange={e => { handleChangeTopLeftRadius(parseInt(e.target.value)); }} />
 
-        <Input name="Top - Right" type="range" className="form-control-range" min='0' max={boxSize} id="border-radius-left" value={borderTopRight} onChange={e => { handleChangeTopRightRadius(parseInt(e.target.value)); }} />
+        <Input name="Top - Right" type="range" className="form-control-range" min='0' max="500" id="border-radius-left" value={borderTopRight} onChange={e => { handleChangeTopRightRadius(parseInt(e.target.value)); }} />
 
-        <Input name="Bottom - Right" type="range" className="form-control-range" min='0' max={boxSize} id="border-radius-right" value={borderBottomRight} onChange={e => { handleChangeBottomRightRadius(parseInt(e.target.value)); }} />
-        
-        <Input name="Bottom - Left" type="range" className="form-control-range" min='0' max={boxSize} id="border-radius-bottom" value={borderBottomLeft} onChange={e => { handleChangeBottomLeftRadius(parseInt(e.target.value)); }} />
+        <Input name="Bottom - Right" type="range" className="form-control-range" min='0' max="500" id="border-radius-right" value={borderBottomRight} onChange={e => { handleChangeBottomRightRadius(parseInt(e.target.value)); }} />
+
+        <Input name="Bottom - Left" type="range" className="form-control-range" min='0' max="500" id="border-radius-bottom" value={borderBottomLeft} onChange={e => { handleChangeBottomLeftRadius(parseInt(e.target.value)); }} />
         <hr />
 
 

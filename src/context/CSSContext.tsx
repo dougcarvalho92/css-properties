@@ -43,14 +43,7 @@ export const CSSProvider: React.FC = ({ children }) => {
     const [boxSizeWidth, setBoxSizeWidth] = useState(500);
     const [boxSize, setBoxSize] = useState(0);
 
-    useEffect(() => {
-        const boxMaxSize = Math.round(boxSizeWidth / 2);
-        setBoxSize(boxMaxSize);
-        if (borderTopLeft > boxMaxSize) setBorderTopLeft(boxMaxSize);
-        if (borderBottomRight > boxMaxSize) setBorderBottomRight(boxMaxSize);
-        if (borderBottomLeft > boxMaxSize) setBorderBottomLeft(boxMaxSize);
-        if (borderTopRight > boxMaxSize) setBorderTopRight(boxMaxSize);
-    }, [boxSizeWidth, boxSizeHeight]);
+
 
     //TAMANHO
     const handleChangeBoxWidth = (value: number) => {
